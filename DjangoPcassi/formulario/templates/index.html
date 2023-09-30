@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1> Productos </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Empresa</th>
+            <th>Producto</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Insumo instalado</th>
+            <th>S.O</th>
+            <th>Memoria</th>
+            <th>Procesador</th>
+            <th>Antivirus</th>
+            <th>Fecha de ingreso</th>
+            <th>Fecha de vencimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for registro in formulario %}
+        <tr>
+            <td>{{registro.nombre}}</td>
+            <td>{{registro.empresa}}</td>
+            <td>{{registro.producto}}</td>
+            <td>{{registro.marca}}</td>
+            <td>{{registro.modelo}}</td>
+            <td>{{registro.insumo_instalado}}</td>
+            <td>{{registro.so}}</td>
+            <td>{{registro.memoria}}</td>
+            <td>{{registro.procesador}}</td>
+            <td>{{registro.antivirus}}</td>
+            <td>{{registro.fecha_ingreso}}</td>
+            <td>{{registro.vence}}</td>
+        </tr>
+        {% endfor%}
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
